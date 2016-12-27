@@ -84,7 +84,7 @@
       {{content}}
       {%  include 'footer' %}
     </main>
-      <div class="booking-form hidden"  style="background-image: url({{website_data.header_image | attachment_url: 'blured' }});">
+      <div class="booking-form hidden"  style="background-image: url('{{website_data.header_image | attachment_url: 'blured' }}');">
         <div class="background"></div>
         <div class="booking-close">
           Close
