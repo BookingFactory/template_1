@@ -165,7 +165,7 @@
         var hideElement = setInterval(function() {
           if (fixer.clientHeight == 100) {
             var overlay = document.getElementById('loading-overlay');
-            overlay.remove()
+            overlay.parentNode.removeChild(overlay);
             {% if website_data.map_center_lat and website_data.map_center_lng %}
               loadScript()
             {% endif %}
