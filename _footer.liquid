@@ -32,11 +32,11 @@
             {% if link.value == 'home' %}
               <a href="{{ '' | link_to: website_data.link_object }}"> {{link.title}} </a>
             {% elsif link.value == 'features' %}
-              <a href="{{ '#features' | link_to: website_data.link_object }}">{{link.title}}</a>
+              <a href="{{ '/#features' | link_to: website_data.link_object }}">{{link.title}}</a>
             {% elsif link.value == 'contacts' %}
-              <a href="{{ '#contact' | link_to: website_data.link_object }}">{{link.title}}</a>
+              <a href="{{ '/#contact' | link_to: website_data.link_object }}">{{link.title}}</a>
             {% elsif link.value == 'faq' %}
-              <a href="{{ '#faq' | link_to: website_data.link_object }}">{{link.title}}></a>
+              <a href="{{ '/#faq' | link_to: website_data.link_object }}">{{link.title}}></a>
             {% elsif link.value == 'about'%}
               <a href="{{ '/about' | link_to: website_data.link_object }}">{{link.title}}></a>
             {% elsif link.value == 'blog' %}

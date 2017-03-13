@@ -8,7 +8,7 @@
       {% if record.cover %}
         <div class="blog-record">
           <h2>
-            <a href="{{ 'blog/' | append: record.slug | link_to }}">{{ record.title }}</a>
+            <a href="{{ 'blog/' | append: record.slug }}">{{ record.title }}</a>
           </h2>
           <div class="sticker">
             <div class="day"> {{ record.created_at.strftime("%d") }} </div>
@@ -22,7 +22,7 @@
       {% else %}
         <div class="blog-record without-cover-image">
           <h2>
-            <a href="{{ 'blog/' | append: record.slug | link_to }}">{{ record.title }}</a>
+            <a href="{{ 'blog/' | append: record.slug }}">{{ record.title }}</a>
           </h2>
           <div class="sticker">
             <div class="day"> {{ record.created_at | date: "%d" }} </div>
