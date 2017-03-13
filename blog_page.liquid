@@ -15,7 +15,7 @@
             <div class="month"> {{ record.created_at.strftime("%B") }} </div>
           </div>
           <img class="cover" src="{{ record.image | attachment_url: 'big' }}" alt="{{record.all_text}}" />
-          {{ record.text | truncate: 300 }}
+          {{ record.text | strip_html | truncate: 300 }}
           <br />
           <a href="{{ 'blog/' | append: record.slug }}">Read more...</a>
         </div>
@@ -28,7 +28,7 @@
             <div class="day"> {{ record.created_at | date: "%d" }} </div>
             <div class="month"> {{ record.created_at | date: "%B" }} </div>
           </div>
-          {{ record.text | truncate: 300 }}
+          {{ record.text | strip_html | truncate: 300 }}
           <br />
           <a href="{{ 'blog/' | append: record.slug }}">Read more...</a>
         </div>
