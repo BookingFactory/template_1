@@ -10,7 +10,7 @@
             {{website_data.header_text_2}}
           </p>
           {% if website_data.booking_link == nil or website_data.booking_link == '' %}
-            <a href="{{ '/book': link_to: website_data.link_object }}" class="btn btn-primary btn-lg booking-form-link" style="background-color: {{website_data.booking_button_color}}"> {{website_data.booking_button_text}} </a>
+            <a href="{{ '/book' | link_to: website_data.link_object }}" class="btn btn-primary btn-lg booking-form-link" style="background-color: {{website_data.booking_button_color}}"> {{website_data.booking_button_text}} </a>
           {% else %}
             <a href="{{ website_data.booking_link }}" class="btn btn-primary btn-lg" style="background-color: {{website_data.booking_button_color}}"> {{website_data.booking_button_text}} </a>
           {% endif %}
