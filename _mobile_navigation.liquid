@@ -169,7 +169,11 @@
                 {% elsif link.category == 'Custom Room Page' %}
                   <li>
                     <a href="{{ link.value | link_to: website_data.link_object }}">{{link.title}}</a>
-                  </li>}
+                  </li>
+                {% elsif link.category == 'Custom Page Link' %}
+                  <li>
+                    <a href="{{ link.value | link_to: website_data.link_object }}">{{link.title}}</a>
+                  </li>
                 {% elsif link.category == 'Blog Record Link' %}
                   <li>
                     <a href="{{ '/blog/' | append: link.value | link_to: website_data.link_object }}">{{link.title}}</a>
