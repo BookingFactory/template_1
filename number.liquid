@@ -34,7 +34,7 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      {% if website_data.booking_link == '' %}
+      {% if website_data.booking_link == nil or website_data.booking_link == '' %}
         <a href="{{ '/book' | link_to: website_data.link_object}}" class="btn btn-lg btn-success booking-form-link">Book Now</a>
       {% else %}
         <a href="{{website_data.booking_link}}" class="btn btn-lg btn-success booking-form-link">Book Now</a>
