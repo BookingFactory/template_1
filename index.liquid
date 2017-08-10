@@ -217,7 +217,7 @@
   <div class="row">
     <div class="col-md-6 left-block">
       <h2>Get In Touch</h2>
-     <form id="contact-form" method="POST" action="/send_email">
+     <form id="contact-form" method="POST" action="{{ "/send_mail" | link_to: website_data.link_object }}">
        <input type="hidden" name="part_a" value="{{website_data.rand_a}}" />
        <input type="hidden" name="part_b" value="{{website_data.rand_b}}" />
        <div class="half-input first">
