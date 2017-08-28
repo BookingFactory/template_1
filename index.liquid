@@ -38,7 +38,7 @@
           <a href="{{ room.slug | link_to: website_data.link_object }}">
             <div class="number">
               <div class="image">
-                <img src="{{room.room_type.photos.first.image | attachment_url: 'public'}}" />
+                <img src="{{room.room_type.photos.order(:featured).first.image | attachment_url: 'public'}}" />
               </div>
               <div class="info">
                 <div class="text">
