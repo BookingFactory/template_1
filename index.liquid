@@ -253,7 +253,7 @@
         <dt> Booking </dt>
         <dd>
           {% if website_data.booking_link == nil or website_data.booking_link == "" %}
-            <a href="" class="btn btn-success btn-sm booking-form-link"> {{website_data.booking_button_text}} </a>
+            <a href="{{ '/book' | link_to: website_data.link_object }}" class="btn btn-success btn-sm booking-form-link"> {{website_data.booking_button_text}} </a>
           {% else %}
             <a href="{{website_data.booking_link}}" class="btn btn-success btn-sm"> {{website_data.booking_button_text}} </a>
           {% endif %}
