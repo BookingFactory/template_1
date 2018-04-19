@@ -19,7 +19,7 @@
                 <i class="fa fa-circle"></i>
               {% endif %}
               {{ facility.title }}
-              <span data-f="{{facility.title}}"></span>
+              <span data-f="{{facility | json}}"></span>
             </li>
           {% endfor %}
         </ul>
