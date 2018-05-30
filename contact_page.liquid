@@ -1,15 +1,15 @@
 <div class="container contacts">
   <div class="row">
     <div class="col-md-6 left-block">
-      <h2>Get In Touch</h2>
+      <h2>{{ 'Get In Touch' | t: website_data.lang }}</h2>
      <form id="contact-form">
        <div class="half-input first">
-         <input class="half" name="name" placeholder="Name" type="text"></input>
+         <input class="half" name="name" placeholder="{{ 'Name' | t: website_data.lang }}" type="text"></input>
        </div>
        <div class="half-input">
-         <input class="half" name="email" placeholder="Email Address" type="email"></input>
+         <input class="half" name="email" placeholder="{{ 'Email' | t: website_data.lang }}" type="email"></input>
        </div>
-       <textarea name="message" placeholder="Message"></textarea>
+       <textarea name="message" placeholder="{{ 'Message' | t: website_data.lang }}"></textarea>
        <div class="control text-right">
          1 + 1 =
          <input class="small" name="answer" placeholder="..." type="text"></input>
@@ -25,19 +25,19 @@
         {{website_data.contact_description_text}}
       </p>
       <dl class="dl-horizontal">
-        <dt>Phone:</dt>
+        <dt>{{ 'Phone' | t: website_data.lang }}:</dt>
         <dd>
           {{website_data.phone_number}}
         </dd>
-        <dt>Email:</dt>
+        <dt>{{ 'Email' | t: website_data.lang }}:</dt>
         <dd>
           {{website_data.email_address}}
         </dd>
-        <dt>Trip Advisor:</dt>
+        <dt>{{ 'Trip Advisor' | t: website_data.lang }}:</dt>
         <dd>
           <a class="btn btn-success btn-sm" href="{{website_data.tripadvisor_listing_link}}%>">View Our Profile</a>
         </dd>
-        <dt>Address:</dt>
+        <dt>{{ 'Address' | t: website_data.lang }}:</dt>
         <dd>
           {{website_data.address}}
         </dd>
