@@ -6501,7 +6501,7 @@ var Membership = function(e, t) {
     var t = function() {
         if (0 == $(".hidden-md:visible").size()) {
             var e = $("a.navbar-brand").outerWidth(),
-                n = $(".navbar .container").width(),
+                n = $(".navbar .container").width() - 20,
                 i = 0;
             $("#top-menu ul.nav>li>a").map(function(e, t) {
                 i += $(t).outerWidth()
