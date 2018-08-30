@@ -4958,6 +4958,7 @@ if (function(e, t) {
 }(jQuery);
 var Membership = function(e, t) {
     "use strict";
+    return;
     var n = "https://app.thebookingfactory.com",
         i = this;
     this.frame = null, this.renderVisibleBlock = function(e) {
