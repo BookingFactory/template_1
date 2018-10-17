@@ -46,7 +46,7 @@
                     {{ room.name }}
                   </span>
                   <br />
-                  <span class="btn btn-primary">{% if website_data.view_room_button_text == nil or website_data.view_room_button_text == '' %}{{website_data.view_room_button_text}}{% else %}View Room{% endif %}</span>
+                  <span class="btn btn-primary">{% if website_data.view_room_button_text == nil or website_data.view_room_button_text == '' %}View Room{% else %}{{website_data.view_room_button_text}}{% endif %}</span>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@
                       {{ room.button_text }}
                     </span>
                   {% else %}
-                    <span class="btn btn-primary">{% if website_data.view_room_button_text == nil or website_data.view_room_button_text == '' %}{{website_data.view_room_button_text}}{% else %}View Room{% endif %}</span>
+                    <span class="btn btn-primary">{% if website_data.view_room_button_text == nil or website_data.view_room_button_text == '' %}View Room{% else %}{{website_data.view_room_button_text}}{% endif %}</span>
                   {% endunless %}
                 </div>
               </div>
