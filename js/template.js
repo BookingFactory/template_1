@@ -6519,7 +6519,7 @@ var Membership = function(e, t) {
     }), $("#contact-form").on("submit", function(e) {
         e.preventDefault();
         var t, n = !0;
-        $("#contact-form [name]:visible").each(function(e, t) {
+        $("#contact-form textarea[name]:visible, #contact-form input[name]:visible").each(function(e, t) {
             "" === $(t).val() ? ($(t).addClass("error"), n = !1) : $(t).removeClass("error")
         }), n && ($("#contact-form button").prepend('<i class="fa fa-spin fa-spinner"></i> ').prop("disabled", !0), t = $("#contact-form").serializeArray(), $.ajax({
             type: "POST",
