@@ -11,6 +11,7 @@
         : {{room.title}}
       {%  endif %}
     </title>
+    <link rel="shortcut icon" href="{{ website_data.favicon | attachment_url: 'default' }}" type="image/x-icon"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     {%  if record and record.meta_description %}
       <meta content="{{recrod.meta_description}}" name="description"/>
@@ -73,7 +74,6 @@
     {% endunless %}
   </div>
   <noscript id="deferred-styles">
-    <link rel="shortcut icon" href="{{ website_data.favicon | attachment_url: 'default' }}" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,500" type="text/css" />
     <link rel="stylesheet" href="{{ '/css/template.css' | file_url: website_data.template }}">
   </noscript>
