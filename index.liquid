@@ -185,9 +185,9 @@
   <div id="map-canvas"></div>
   <script>
     {% if website_data.map_center_lat and website_data.map_center_lng %}
-      var zoom = {{website_data.map_zoom_level}}
-      var lat = {{website_data.map_center_lat}}
-      var lng = {{website_data.map_center_lng}}
+      var zoom = {{website_data.map_zoom_level}};
+      var lat = {{website_data.map_center_lat}};
+      var lng = {{website_data.map_center_lng}};
       function initialize() {
         var myOptions = {
             zoom: zoom,
@@ -196,7 +196,7 @@
             scrollwheel: false
         }
         map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
-
+        map.setZoom(zoom);
         var marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(lat, lng)
