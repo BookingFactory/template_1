@@ -220,6 +220,9 @@
      <form id="contact-form" method="POST" action="{{ "/send_mail" | link_to: website_data.link_object }}">
        <input type="hidden" name="part_a" value="{{website_data.rand_a}}" />
        <input type="hidden" name="part_b" value="{{website_data.rand_b}}" />
+       <div class="half-input hidden">
+         <input class="half" name="part_c" type="text"></input>
+       </div>
        <div class="half-input first">
          <input class="half" name="name" placeholder="{{ 'Name' | t: website_data.lang }}" type="text"></input>
        </div>
