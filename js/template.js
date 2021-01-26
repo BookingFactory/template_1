@@ -6518,21 +6518,26 @@ var Membership = function(e, t) {
         n.attr("src", t.attr("href")), t.closest(".room-page").find(".active").removeClass("active"), t.closest("li").addClass("active")
     }), $("#contact-form").on("submit", function(e) {
         e.preventDefault();
-        var t, n = !0;
-        $("#contact-form textarea[name]:visible, #contact-form input[name]:visible").each(function(e, t) {
-            "" === $(t).val() ? ($(t).addClass("error"), n = !1) : $(t).removeClass("error")
-        }), n && ($("#contact-form button").prepend('<i class="fa fa-spin fa-spinner"></i> ').prop("disabled", !0), t = $("#contact-form").serializeArray(), $.ajax({
-            type: "POST",
-            url: $("#contact-form").attr("action"),
-            data: t,
-            success: function(e) {
-                $("#contact-form").replaceWith("<p>Your message was sent successfully. Thanks.</p>")
-            },
-            error: function(e) {
-                "Error" === e.responseJSON.status && (alert(e.responseJSON.msg), $("#contact-form button").prop("disabled", !1).find("i").remove())
-            },
-            dataType: "JSON"
-        }))
+        if ($("#contact-form input[name=part_c]").val().length != 0) {
+            $("#contact-form").replaceWith("<p>Your message was sent successfully. Thanks.</p>")
+        }
+        else {
+            var t, n = !0;
+            $("#contact-form textarea[name]:visible, #contact-form input[name]:visible").each(function(e, t) {
+                "" === $(t).val() ? ($(t).addClass("error"), n = !1) : $(t).removeClass("error")
+            }), n && ($("#contact-form button").prepend('<i class="fa fa-spin fa-spinner"></i> ').prop("disabled", !0), t = $("#contact-form").serializeArray(), $.ajax({
+                type: "POST",
+                url: $("#contact-form").attr("action"),
+                data: t,
+                success: function(e) {
+                    $("#contact-form").replaceWith("<p>Your message was sent successfully. Thanks.</p>")
+                },
+                error: function(e) {
+                    "Error" === e.responseJSON.status && (alert(e.responseJSON.msg), $("#contact-form button").prop("disabled", !1).find("i").remove())
+                },
+                dataType: "JSON"
+            }))
+        }
     }), $(".show-more").on("click", function(e) {
         e.preventDefault(), $(".invisible-questions:visible").size() > 0 ? ($(".invisible-questions").slideUp(500), $(".show-more").html('Show more questions <i class="fa fa-caret-down"></i>')) : ($(".invisible-questions").slideDown(500), $(".show-more").html('Show less questions <i class="fa fa-caret-up"></i>'))
     }), $("#top-menu .navbar-nav").on("mouseover", ".dropdown", function(e) {
